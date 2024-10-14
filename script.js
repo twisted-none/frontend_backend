@@ -28,6 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Добавляем обработчики событий для кнопок "Заказать"
+    const orderButtons = document.querySelectorAll('.service-item button');
+    orderButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const serviceType = this.closest('.service-item').querySelector('h3').textContent.toLowerCase();
+            openModal(serviceType);
+        });
+    });
+
     // Функция открытия модального окна
     window.openModal = function(serviceType) {
         const modal = document.getElementById("modal");
@@ -36,13 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
         let serviceName;
         switch (serviceType) {
-            case 'site-card':
+            case 'сайт-визитка':
                 serviceName = 'сайта-визитки';
                 break;
-            case 'corporate-site':
+            case 'корпоративный сайт':
                 serviceName = 'корпоративного сайта';
                 break;
-            case 'online-store':
+            case 'интернет-магазин':
                 serviceName = 'интернет-магазина';
                 break;
             default:
