@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    console.log('Menu toggle:', menuToggle);
+    console.log('Main nav:', mainNav);
+    
+    if (menuToggle && mainNav) {
+        console.log('Adding click event listener to menu toggle');
+        menuToggle.addEventListener('click', function() {
+            console.log('Menu toggle clicked');
+            mainNav.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    }
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     // Обработка таблиц посещаемости
     const tables = document.querySelectorAll('table');
     
