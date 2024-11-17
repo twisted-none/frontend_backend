@@ -3,161 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Персональный сайт - Швецов Демьян Андреевич</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Портфолио | Главная</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .avatar {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 999;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="logo.png" alt="Логотип">
+    <header class="py-3 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <img src="logo.png" alt="Логотип" height="50">
+                </div>
+                <div class="col">
+                    <h1 class="h4 mb-0">Швецов Демьян Андреевич</h1>
+                    <p class="mb-0">Группа ЭФБО-09-23</p>
+                </div>
             </div>
-            <div class="student-info">
-                <h1 class="student-name">Швецов Демьян Андреевич</h1>
-                <p class="group-name">Группа ЭФБО-09-23</p>
-            </div>
-            <button class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="semester1.html">Первый семестр</a></li>
-                <li><a href="#semester2">Второй семестр</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="#auth">Авторизация</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <aside>
-            <h2 class="sub-heading">Навигация по странице</h2>
-            <ul>
-                <li><a href="#frontend">Фронтенд</a></li>
-                <li><a href="#backend">Бэкенд</a></li>
-            </ul>
-        </aside>
-
-        <section id="home">
-            <div class="intro">
-                <div class="intro-text">
-                    <h2 class="main-heading">Добро пожаловать на мой сайт</h2>
-                    <p class="text-paragraph">Меня зовут Швецов Демьян Андреевич и я начинающий специалист по веб-разработке.</p>
-                </div>
-                <img src="avatar.png" alt="Аватар" class="avatar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Семестры
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="semester1.html">Первый семестр</a></li>
+                            <li><a class="dropdown-item" href="#semester2">Второй семестр</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#auth">Авторизация</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </nav>
 
-            <section id="frontend">
-                <h2>Фронтенд</h2>
-                <p>Фронтенд - это та часть веб-разработки, которая отвечает за визуальное восприятие и интерактивность сайта или веб-приложения. Он включает в себя все элементы, с которыми пользователи взаимодействуют напрямую: от кнопок и форм до анимаций и графики.</p>
-                <p>Основная цель фронтенда - обеспечить удобный и интуитивно понятный интерфейс, который делает взаимодействие с контентом как можно более комфортным и эффективным. Для реализации фронтенда используются различные технологии и инструменты.</p>
-                <h3>Ключевые технологии фронтенда:</h3>
-                <ul>
-                    <li>HTML (HyperText Markup Language) - язык разметки, который определяет структуру веб-страницы.</li>
-                    <li>CSS (Cascading Style Sheets) - язык стилей, отвечающий за визуальное оформление веб-страниц.</li>
-                    <li>JavaScript - язык программирования, позволяющий создавать динамический и интерактивный контент.</li>
+    <main class="container py-4">
+        <div class="row mb-4">
+            <div class="col">
+                <h2 class="mb-4">Навигация по странице</h2>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#frontend">Фронтенд</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#backend">Бэкенд</a>
+                    </li>
                 </ul>
-                <p>Современная фронтенд-разработка также включает использование различных фреймворков и библиотек, таких как React, Angular или Vue.js, которые значительно упрощают процесс создания сложных пользовательских интерфейсов.</p>
-                <h3>Ответственность фронтенд-разработчика:</h3>
-                <ol>
-                    <li>Создание адаптивных и отзывчивых дизайнов, обеспечивающих корректное отображение на различных устройствах.</li>
-                    <li>Оптимизация производительности веб-приложений для быстрой загрузки и плавной работы.</li>
-                    <li>Обеспечение кроссбраузерной совместимости для корректной работы во всех популярных браузерах.</li>
-                    <li>Реализация пользовательского опыта (UX) и пользовательского интерфейса (UI) в соответствии с дизайн-макетами.</li>
-                    <li>Интеграция фронтенда с бэкендом через API и другие механизмы взаимодействия.</li>
-                </ol>
-                <p>Фронтенд-разработка - это динамичная и постоянно развивающаяся область. Новые технологии и подходы появляются регулярно, поэтому фронтенд-разработчики должны постоянно учиться и адаптироваться к изменениям в индустрии.</p>
-                <p>В современном мире фронтенд играет ключевую роль в успехе веб-проектов. Хорошо спроектированный и реализованный фронтенд может значительно повысить удовлетворенность пользователей, увеличить конверсию и, в конечном итоге, способствовать достижению бизнес-целей проекта.</p>
-            </section>
+            </div>
+        </div>
 
-            <section id="videos_frontend">
-                <h2>Видеоматериалы</h2>
-                <div class="video-container">
-                    <video width="400" height="300" controls>
-                        <source src="video1.webm" type="video/webm">
-                        Ваш браузер не поддерживает видео тег.
-                    </video>
+        <section id="home" class="mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2>Добро пожаловать на мой сайт</h2>
+                    <p class="lead">Меня зовут Швецов Демьян Андреевич и я начинающий специалист по веб-разработке.</p>
                 </div>
-            </section>
+                <div class="col-md-4 text-center">
+                    <img src="avatar.png" alt="Аватар" class="avatar img-fluid">
+                </div>
+            </div>
+        </section>
 
-            <section id="backend">
-                <h2>Бэкенд</h2>
-                <p>Бэкенд - это основа любого веб-приложения, скрытая от глаз пользователей, но играющая критически важную роль в функционировании всего проекта. Здесь происходят операции обработки данных, реализуется бизнес-логика и осуществляется взаимодействие с базами данных.</p>
-                <h3>Ключевые аспекты бэкенд-разработки:</h3>
-                <ol>
-                    <li>Серверная логика: Реализация алгоритмов и бизнес-процессов, обработка запросов от клиентской части.</li>
-                    <li>Базы данных: Проектирование структуры, оптимизация запросов, обеспечение целостности и безопасности данных.</li>
-                    <li>API (Application Programming Interface): Разработка интерфейсов для взаимодействия между фронтендом и бэкендом.</li>
-                    <li>Безопасность: Защита от различных типов атак, аутентификация и авторизация пользователей.</li>
-                    <li>Масштабирование: Обеспечение способности системы справляться с увеличением нагрузки.</li>
-                </ol>
-                <h3>Технологии и инструменты бэкенд-разработки:</h3>
-                <ul>
-                    <li>Языки программирования: Python, Java, Ruby, PHP, Node.js и другие.</li>
-                    <li>Фреймворки: Django, Spring, Ruby on Rails, Laravel, Express.js и т.д.</li>
-                    <li>Базы данных: MySQL, PostgreSQL, MongoDB, Redis, Cassandra.</li>
-                    <li>Серверы: Apache, Nginx, Microsoft IIS.</li>
-                    <li>Инструменты для работы с API: Swagger, Postman.</li>
-                </ul>
-                <p>Бэкенд-разработчики должны обладать глубоким пониманием архитектуры приложений, принципов проектирования баз данных и сетевых протоколов. Они также должны быть знакомы с различными паттернами проектирования и уметь писать эффективный, масштабируемый код.</p>
-                <h3>Ключевые задачи бэкенд-разработчика:</h3>
-                <ol>
-                    <li>Разработка и поддержка серверной части веб-приложений.</li>
-                    <li>Оптимизация производительности баз данных и серверных операций.</li>
-                    <li>Интеграция различных сервисов и API.</li>
-                    <li>Обеспечение безопасности данных и защита от кибератак.</li>
-                    <li>Разработка и поддержка документации API.</li>
-                    <li>Мониторинг и отладка серверной инфраструктуры.</li>
-                </ol>
-                <p>Бэкенд-разработка требует постоянного обучения и адаптации к новым технологиям и методологиям. С ростом сложности веб-приложений и увеличением объемов данных, роль бэкенд-разработчиков становится все более важной для создания надежных, эффективных и масштабируемых решений.</p>
-            </section>
+        <section id="frontend" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Фронтенд</h2>
+                    <p class="card-text">Фронтенд - это та часть веб-разработки, которая отвечает за визуальное восприятие и интерактивность сайта или веб-приложения.</p>
+                    
+                    <h3 class="h4 mt-4">Ключевые технологии фронтенда:</h3>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">HTML (HyperText Markup Language) - язык разметки, который определяет структуру веб-страницы.</li>
+                        <li class="list-group-item">CSS (Cascading Style Sheets) - язык стилей, отвечающий за визуальное оформление веб-страниц.</li>
+                        <li class="list-group-item">JavaScript - язык программирования, позволяющий создавать динамический и интерактивный контент.</li>
+                    </ul>
 
-            <section id="videos_backend">
-                <h3>Видеоматериалы</h3>
-                    <div class="video-container">
-                        <video controls preload="metadata" poster="placeholder.jpg">
-                        <source src="video2.webm" type="video/webm">
-                        Ваш браузер не поддерживает видео тег.
-                        </video>
+                    <h3 class="h4">Ответственность фронтенд-разработчика:</h3>
+                    <div class="list-group mb-4">
+                        <div class="list-group-item">Создание адаптивных и отзывчивых дизайнов</div>
+                        <div class="list-group-item">Оптимизация производительности веб-приложений</div>
+                        <div class="list-group-item">Обеспечение кроссбраузерной совместимости</div>
+                        <div class="list-group-item">Реализация пользовательского опыта (UX) и интерфейса (UI)</div>
+                        <div class="list-group-item">Интеграция фронтенда с бэкендом</div>
                     </div>
-            </section>
+                </div>
+            </div>
+        </section>
 
+        <section id="backend" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Бэкенд</h2>
+                    <p class="card-text">Бэкенд - это основа любого веб-приложения, скрытая от глаз пользователей, но играющая критически важную роль в функционировании всего проекта.</p>
+
+                    <h3 class="h4 mt-4">Ключевые аспекты бэкенд-разработки:</h3>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">Серверная логика: Реализация алгоритмов и бизнес-процессов</li>
+                        <li class="list-group-item">Базы данных: Проектирование структуры, оптимизация запросов</li>
+                        <li class="list-group-item">API: Разработка интерфейсов взаимодействия</li>
+                        <li class="list-group-item">Безопасность: Защита от атак, аутентификация</li>
+                        <li class="list-group-item">Масштабирование: Обеспечение роста системы</li>
+                    </ul>
+
+                    <h3 class="h4">Технологии и инструменты:</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-info">
+                                <h4 class="h5">Языки программирования</h4>
+                                <p class="mb-0">Python, Java, Ruby, PHP, Node.js</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-info">
+                                <h4 class="h5">Фреймворки</h4>
+                                <p class="mb-0">Django, Spring, Ruby on Rails, Laravel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>© Швецов Демьян Андреевич, 2024</p>
-        <div class="social-icons">
-            <a href="https://vk.com/twistednone" class="vk-icon" target="_blank">VK</a>
-            <a href="https://t.me/twistednone" class="telegram-icon" target="_blank">Telegram</a>
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© Швецов Демьян Андреевич, 2024</p>
+                    <div class="social-icons">
+                        <a href="https://vk.com/twistednone" target="_blank" class="btn btn-outline-primary">VK</a>
+                        <a href="https://t.me/twistednone" target="_blank" class="btn btn-outline-info">Telegram</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <button id="scrollToTop" onclick="scrollToTop()">↑</button>
+    <button id="scrollToTop" class="btn btn-primary rounded-circle">↑</button>
 
-    <script src="script.js"></script>
-
-    <button id="scrollToTop">↑</button>
-
+    <!-- Подключение Bootstrap JavaScript и Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     <script>
-    // Показать кнопку, когда пользователь прокрутит страницу на 100px вниз
-    window.onscroll = function() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("scrollToTop").style.display = "block";
-        } else {
-            document.getElementById("scrollToTop").style.display = "none";
-        }
-    };
+        // Показ/скрытие кнопки прокрутки вверх
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTop").style.display = "block";
+            } else {
+                document.getElementById("scrollToTop").style.display = "none";
+            }
+        };
 
-    // Прокрутка вверх при клике на кнопку
-    document.getElementById("scrollToTop").onclick = function() {
-        document.body.scrollTop = 0; // Для Safari
-        document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE и Opera
-    };
+        // Прокрутка вверх при клике на кнопку
+        document.getElementById("scrollToTop").onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
     </script>
 </body>
 </html>

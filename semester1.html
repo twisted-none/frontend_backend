@@ -3,223 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Первый семестр - Швецов Демьян Андреевич</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Портфолио | Первый семестр</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .table-responsive {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .attendance-cell:hover, .completion-cell:hover {
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 999;
+        }
+        .embed-responsive {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+        .embed-responsive iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="logo.png" alt="Логотип">
+    <header class="py-3 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <img src="logo.png" alt="Логотип" height="50">
+                </div>
+                <div class="col">
+                    <h1 class="h4 mb-0">Швецов Демьян Андреевич</h1>
+                    <p class="mb-0">Группа ЭФБО-09-23</p>
+                </div>
             </div>
-            <div class="student-info">
-                <h1 class="student-name">Швецов Демьян Андреевич</h1>
-                <p class="group-name">Группа ЭФБО-09-23</p>
-            </div>
-            <button class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="semester1.html">Первый семестр</a></li>
-                <li><a href="#semester2">Второй семестр</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="#auth">Авторизация</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main role="main">
-        <section id="semester1">
-            <h2>Первый семестр</h2>
-            <h3>Лекции</h3>
-            <table id="lectures">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Тема</th>
-                        <th>Отметка о посещении</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Основы языка HTML</td>
-                        <td class="attendance"></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Углубленное изучение HTML</td>
-                        <td class="attendance"></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Таблицы и формы</td>
-                        <td class="attendance"></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Адаптивный верстка. Flexbox и Grid Layout</td>
-                        <td class="attendance"></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Bootstrap — работа с фреймворком</td>
-                        <td class="attendance"></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Основы языка JavaScript</td>
-                        <td class="attendance"></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Работа с DOM и событиями в JavaScript</td>
-                        <td class="attendance"></td>
-                    </tr>
-                </tbody>
-            </table>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Семестры
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="semester1.html">Первый семестр</a></li>
+                            <li><a class="dropdown-item" href="#semester2">Второй семестр</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#auth">Авторизация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-            <h3>Практические занятия</h3>
-            <table id="practicals">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Тема</th>
-                        <th>Отметка о посещении</th>
-                        <th>Отметка о выполнении</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Основы языка HTML</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Формы и элементы HTML5</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Основы CSS. Селекторы в HTML</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Основы работы с CSS</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Работа с макетами в CSS</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Псевдоклассы и псевдоэлементы в HTML</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Медиазапросы</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Bootstrap</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Основы языка JavaScript</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Математические операции в JavaScript</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>Использование циклов и работа с объектами в JavaScript</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>Отладка скриптов</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Динамика и работа с окнами</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>JQuery</td>
-                        <td class="attendance"></td>
-                        <td class="completion"></td>
-                    </tr>
-                </tbody>
-            </table>
+    <main class="container py-4">
+        <section id="semester1" class="mb-5">
+            <h2 class="mb-4">Первый семестр</h2>
 
-            <h3>Расписание занятий</h3>
-			<p>Учебные занятия проходят по адресу: проспект Вернадского, д. 78, РТУ МИРЭА</p>
-			<div id="map" style="width: 100%; height: 400px;"></div>
+            <!-- Форма для отметки посещаемости -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Форма учета посещаемости</h3>
+                    <form id="attendanceForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="studentName" class="form-label">ФИО студента</label>
+                                <input type="text" class="form-control" id="studentName" required>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, введите ФИО
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="groupNumber" class="form-label">Номер группы</label>
+                                <input type="text" class="form-control" id="groupNumber" required>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, введите номер группы
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lessonDate" class="form-label">Дата занятия</label>
+                                <input type="date" class="form-control" id="lessonDate" required>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, выберите дату
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lessonType" class="form-label">Тип занятия</label>
+                                <select class="form-select" id="lessonType" required>
+                                    <option value="">Выберите тип занятия</option>
+                                    <option value="lecture">Лекция</option>
+                                    <option value="practice">Практическое занятие</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, выберите тип занятия
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="comment" class="form-label">Комментарий</label>
+                                <textarea class="form-control" id="comment" rows="3"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
-            <h3>Учебная программа</h3>
-            <embed src="program.pdf" type="application/pdf" width="100%" height="600px" />
+            <!-- Таблицы -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Лекции</h3>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>№</th>
+                                            <th>Тема</th>
+                                            <th>Отметка о посещении</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Основы языка HTML</td>
+                                            <td class="attendance-cell"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Углубленное изучение HTML</td>
+                                            <td class="attendance-cell"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Таблицы и формы</td>
+                                            <td class="attendance-cell"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Адаптивный верстка. Flexbox и Grid Layout</td>
+                                            <td class="attendance-cell"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Bootstrap — работа с фреймворком</td>
+                                            <td class="attendance-cell"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Основы языка JavaScript</td>
+                                            <td class="attendance-cell"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Работа с DOM и событиями в JavaScript</td>
+                                            <td class="attendance-cell"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Практические занятия</h3>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>№</th>
+                                            <th>Тема</th>
+                                            <th>Посещение</th>
+                                            <th>Выполнение</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Основы языка HTML</td>
+                                            <td class="attendance-cell"></td>
+                                            <td class="completion-cell"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Формы и элементы HTML5</td>
+                                            <td class="attendance-cell"></td>
+                                            <td class="completion-cell"></td>
+                                        </tr>
+                                        <!-- Остальные строки таблицы -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Встроенные элементы -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Учебные материалы</h3>
+                            <div class="embed-responsive mb-3">
+                                <iframe src="program.pdf" width="100%" height="500px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Расписание занятий</h3>
+                            <p>Учебные занятия проходят по адресу: проспект Вернадского, д. 78, РТУ МИРЭА</p>
+                            <div id="map" style="width: 100%; height: 400px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>© Швецов Демьян Андреевич, 2024</p>
-        <div class="social-icons">
-            <a href="https://vk.com/twistednone" class="vk-icon" target="_blank">VK</a>
-            <a href="https://t.me/twistednone" class="telegram-icon" target="_blank">Telegram</a>
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© Швецов Демьян Андреевич, 2024</p>
+                    <div class="social-icons">
+                        <a href="https://vk.com/twistednone" target="_blank" class="btn btn-outline-primary">VK</a>
+                        <a href="https://t.me/twistednone" target="_blank" class="btn btn-outline-info">Telegram</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
-    <script src="script.js"></script>
+    <button id="scrollToTop" class="btn btn-primary rounded-circle">↑</button>
 
-    <button id="scrollToTop">↑</button>
-
+    <!-- Подключение Bootstrap JavaScript и Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <!-- Подключение Яндекс Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU"></script>
     <script>
-    // Показать кнопку, когда пользователь прокрутит страницу на 100px вниз
-    window.onscroll = function() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("scrollToTop").style.display = "block";
-        } else {
-            document.getElementById("scrollToTop").style.display = "none";
+        // Валидация формы
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+        // Обработка кликов по ячейкам таблицы
+        document.querySelectorAll('.attendance-cell, .completion-cell').forEach(cell => {
+            cell.addEventListener('click', function() {
+                this.textContent = this.textContent === '✓' ? '' : '✓';
+            });
+        });
+
+        // Инициализация карты
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.669984, 37.479318],
+                zoom: 15
+            });
+            var myPlacemark = new ymaps.Placemark([55.669984, 37.479318], {
+                hintContent: 'РТУ МИРЭА',
+                balloonContent: 'РТУ МИРЭА, проспект Вернадского, д. 78'
+            });
+            myMap.geoObjects.add(myPlacemark);
         }
-    };
 
-    // Прокрутка вверх при клике на кнопку
-    document.getElementById("scrollToTop").onclick = function() {
-        document.body.scrollTop = 0; // Для Safari
-        document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE и Opera
-    };
+        // Кнопка прокрутки вверх
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTop").style.display = "block";
+            } else {
+                document.getElementById("scrollToTop").style.display = "none";
+            }
+        };
+
+        document.getElementById("scrollToTop").onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
     </script>
-
 </body>
 </html>

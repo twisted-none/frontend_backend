@@ -55,10 +55,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const myModal = new bootstrap.Modal(document.getElementById('modal'));
+
     // Функция открытия модального окна
     window.openModal = function(serviceType) {
-        const modal = document.getElementById("modal");
-        const modalTitle = modal.querySelector("h2");
+        const modalTitle = document.querySelector(".modal-title");
         const serviceInput = document.getElementById("serviceType");
     
         let serviceName;
@@ -77,16 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
         modalTitle.textContent = `Заказать разработку ${serviceName}`;
-        serviceInput.value = serviceName;
-        modal.style.display = "flex";
-        document.body.style.overflow = "hidden";  // Предотвращаем прокрутку страницы
+        serviceInput.value = serviceType;
+        myModal.show();
     }
 
     // Функция закрытия модального окна
     window.closeModal = function() {
-        const modal = document.getElementById("modal");
-        modal.style.display = "none";
-        document.body.style.overflow = "";  // Возвращаем прокрутку страницы
+        myModal.hide();
     }
 
     // Закрытие модального окна при клике вне его
