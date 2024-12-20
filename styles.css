@@ -1,0 +1,48 @@
+/* Анимация для заголовка H1 при наведении мыши (эффект "увеличения") */
+#main-title {
+    transition: transform 0.3s ease;
+}
+
+#main-title:hover {
+    transform: scale(1.2);
+}
+
+/* Анимация для параграфа текста, который будет плавно изменять цвет фона при клике */
+.paragraph {
+    transition: background-color 0.5s ease;
+}
+
+.paragraph.clicked {
+    background-color: #f0f0f0;
+}
+
+/* Кнопка "Показать лекции" с анимацией для таблицы */
+#lectures-table {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#lectures-table.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Анимация для фотографии студента, которая будет вращаться при наведении */
+.student-photo {
+    transition: transform 0.5s ease;
+}
+
+.student-photo:hover {
+    transform: rotate(360deg);
+}
+
+/* Анимация для сообщения "Форма отправлена!" */
+.form-message {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.form-message.show {
+    opacity: 1;
+}

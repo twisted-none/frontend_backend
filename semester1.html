@@ -6,6 +6,7 @@
     <title>Портфолио | Первый семестр</title>
     <!-- Подключение Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
     <style>
         .social-icons a {
             margin: 0 10px;
@@ -49,8 +50,8 @@
                     <img src="logo.png" alt="Логотип" height="50">
                 </div>
                 <div class="col">
-                    <h1 class="h4 mb-0">Швецов Демьян Андреевич</h1>
-                    <p class="mb-0">Группа ЭФБО-09-23</p>
+                    <h1 class="h4 mb-0" id="main-title">Швецов Демьян Андреевич</h1>
+                    <p class="mb-0 paragraph">Группа ЭФБО-09-23</p>
                 </div>
             </div>
         </div>
@@ -140,98 +141,84 @@
                 </div>
             </div>
 
-            <!-- Таблицы -->
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Лекции</h3>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>№</th>
-                                            <th>Тема</th>
-                                            <th>Отметка о посещении</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Основы языка HTML</td>
-                                            <td class="attendance-cell"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Углубленное изучение HTML</td>
-                                            <td class="attendance-cell"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Таблицы и формы</td>
-                                            <td class="attendance-cell"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Адаптивный верстка. Flexbox и Grid Layout</td>
-                                            <td class="attendance-cell"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Bootstrap — работа с фреймворком</td>
-                                            <td class="attendance-cell"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Основы языка JavaScript</td>
-                                            <td class="attendance-cell"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>Работа с DOM и событиями в JavaScript</td>
-                                            <td class="attendance-cell"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Таблицы -->
+    <button id="toggleLectures" class="btn btn-primary mt-3">Показать лекции</button>
+
+<!-- Таблица с лекциями, изначально скрыта -->
+		<div id="lectures-table" class="mt-3">
+			<h3>Лекции</h3>
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<thead class="table-light">
+						<tr>
+							<th>№</th>
+							<th>Тема</th>
+							<th>Отметка о посещении</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Основы языка HTML</td>
+							<td class="attendance-cell"></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Углубленное изучение HTML</td>
+							<td class="attendance-cell"></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Таблицы и формы</td>
+							<td class="attendance-cell"></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Адаптивная верстка. Flexbox и Grid Layout</td>
+							<td class="attendance-cell"></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Bootstrap — работа с фреймворком</td>
+							<td class="attendance-cell"></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Основы языка JavaScript</td>
+							<td class="attendance-cell"></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>Работа с DOM и событиями в JavaScript</td>
+							<td class="attendance-cell"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 
                 <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Практические занятия</h3>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>№</th>
-                                            <th>Тема</th>
-                                            <th>Посещение</th>
-                                            <th>Выполнение</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Основы языка HTML</td>
-                                            <td class="attendance-cell"></td>
-                                            <td class="completion-cell"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Формы и элементы HTML5</td>
-                                            <td class="attendance-cell"></td>
-                                            <td class="completion-cell"></td>
-                                        </tr>
-                                        <!-- Остальные строки таблицы -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="mb-4">Первый семестр</h2>
+			<div class="table-responsive">
+				<table id="practices-table" class="table table-hover">
+					<thead class="table-light">
+						<tr>
+							<th>№</th>
+							<th>Тема</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>1</td><td>Основы языка HTML</td></tr>
+						<tr><td>2</td><td>Формы и элементы HTML5</td></tr>
+					</tbody>
+				</table>
+        </div>
                 </div>
+				<button id="view-second-semester" class="btn btn-primary mt-3">Посмотреть практики второго семестра</button>
+
+				<div class="mt-5">
+					<img src="student.jpg" alt="Фото студента" class="student-photo" id="student-photo">
+				</div>
             </div>
 
             <!-- Встроенные элементы -->
@@ -331,6 +318,65 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         };
+		
+	// Обработчик клика по заголовку H1
+	document.getElementById("main-title").addEventListener("click", function() {
+		alert("Вы кликнули на заголовок - так держать!");
+	});
+
+	// Обработчик клика по кнопке смены семестра
+	document.getElementById("view-second-semester").addEventListener("click", function() {
+    // Меняем заголовок h2
+    document.querySelector("h2").textContent = "Второй семестр";
+
+    const secondSemesterPractices = [
+        "Базовое бэкенд-приложение", "HTTP-запросы", "JSON и работа с ним", "HTTP-ответы",
+        "Проектирование API", "Роутинг и его настройка", "NoSQL базы данных", 
+        "Обеспечение авторизации и доступа пользователей", "Работа сторонних сервисов уведомления и авторизации",
+        "Основы ReactJS", "Работа с компонентами динамической DOM", "Использование хуков в React",
+        "Основы микросервисной архитектуры", "Разработка классических модулей веб-приложений"
+    ];
+
+    const tableBody = document.querySelector("#practices-table tbody");
+    tableBody.innerHTML = secondSemesterPractices.map((topic, index) => `
+        <tr><td>${index + 1}</td><td>${topic}</td></tr>
+    `).join('');
+});
+
+
+	// Обработчики событий на фото студента
+	const studentPhoto = document.getElementById("student-photo");
+
+	studentPhoto.addEventListener("mouseover", function() {
+		this.style.width = "220px";
+	});
+
+	studentPhoto.addEventListener("mouseout", function() {
+		this.style.width = "200px";
+	});
+
+	studentPhoto.addEventListener("click", function() {
+		this.src = "prepod.jpg";
+	});
+
+	studentPhoto.addEventListener("dblclick", function() {
+		alert("Не налегай, у меня не так много любимых преподавателей");
+	});
+	
+	document.querySelectorAll('.paragraph').forEach(paragraph => {
+    paragraph.addEventListener('click', function() {
+        this.classList.toggle('clicked');
+    });
+
+    const toggleLecturesButton = document.getElementById("toggleLectures");
+const lecturesTable = document.getElementById("lectures-table");
+
+    // Обработчик события для кнопки
+    toggleLecturesButton.addEventListener("click", function() {
+        // Переключаем класс "show" для таблицы
+        lecturesTable.classList.toggle("show");
+    });
+});
     </script>
 </body>
 </html>
